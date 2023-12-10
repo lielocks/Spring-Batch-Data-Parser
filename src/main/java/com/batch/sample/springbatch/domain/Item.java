@@ -1,9 +1,18 @@
-package com.batch.sample.springbatch.dto;
+package com.batch.sample.springbatch.domain;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
-public class CsvDto {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Getter
+@Setter
+@ToString
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Item {
+    @Id
     Integer id;
     String name;
     String brand;
